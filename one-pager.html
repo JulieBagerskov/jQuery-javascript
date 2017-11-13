@@ -6,13 +6,27 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <!--Loading jQuery from server-->
 <script type="text/javascript" src=" https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!--loading jQuery plugin (https://github.com/flesler/jquery.scrollTo)--> 
+	<script type="text/javascript" src="scripts/jquery.scrollTo.min"></script>
 <!--Embedded JS-->
 <script type="text/javascript">
 	//The famous document.ready function. 
 	$(document).ready (function(){
+		
 		//All JS code goes here:
+		
 		$("#jsterror").click(myFunction);
 		
+		//Implementer the scroll to plugin. 
+		
+		$("#stickynav a").click(function(e){
+			e.preventDefault();
+			$(window).scrollTo(this.hash, 1000);
+			
+		}); 
+		
+		
+	// Disse slutklammer nedenunder her er slutningen på document.ready. 	
 	});
 	
 	
